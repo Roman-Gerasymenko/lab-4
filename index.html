@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Web Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Enhanced Web Project</h1>
+      <div id="icons">
+        <a href="news.html" title="News">
+          <img src="icons/news.png" alt="News Icon" />
+        </a>
+        <a href="cart.html" title="Cart">
+          <img src="icons/cart.png" alt="Cart Icon" />
+        </a>
+        <a href="login.html" title="Login">
+          <img src="icons/login.png" alt="Login Icon" />
+        </a>
+        <a href="register.html" title="Register">
+          <img src="icons/register.png" alt="Register Icon" />
+        </a>
+      </div>
+    </header>
+
+    <div>
+      <label for="filter">Filter: </label>
+      <select id="filter" onchange="filterCards()">
+        <option value="all">All</option>
+        <option value="category1">Category 1</option>
+        <option value="category2">Category 2</option>
+      </select>
+    </div>
+
+    <div id="sort-options">
+      <button onclick="sortCards('name')">Sort by Name</button>
+      <button onclick="sortCards('priceAsc')">
+        Sort by Price (Low to High)
+      </button>
+      <button onclick="sortCards('priceDesc')">
+        Sort by Price (High to Low)
+      </button>
+    </div>
+
+    <div id="card-container"></div>
+
+    <div id="cart-container"></div>
+
+    <div id="subscription-box" class="hidden">
+      <p>Subscribe to our updates!</p>
+      <button id="subscribe-button">Subscribe</button>
+      <button id="close-subscription-button">Close</button>
+    </div>
+
+    <div id="ad-box" class="hidden">
+      <p>Check out our offer!</p>
+      <button id="close-ad-button">Close</button>
+    </div>
+
+    <button id="scroll-to-top" class="hidden" onclick="scrollToTop()">
+      Scroll to Top
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
